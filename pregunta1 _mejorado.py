@@ -20,6 +20,7 @@ def main():
     
     for i in range(10):
         hilo_thread = threading.Thread(target=hilo)
+        #hilo_thread = threading.Thread(target=hilo, daemon=True)  #hilo demonio , cuando termina el hilo principal, terminan todos los hilos
         hilo_thread.start()
         hilo_thread.join()
 
